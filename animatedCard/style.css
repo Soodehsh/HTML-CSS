@@ -1,0 +1,170 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  justify-content: center;
+  background: #444;
+  align-items: center;
+  font-family: arial;
+}
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .card {
+  position: relative;
+}
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.4s;
+}
+.container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  transform: translateY(0);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #00fff2,
+    inset -20px 0 80px #1a6360, inset 20px 0 300px #00fff2,
+    inset -20px 0 300px #1a6360, 0 0 50px #fff, -10px 0 80px #00fff2,
+    10px 0 80px #1a6360;
+}
+.container .card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+  text-align: center;
+}
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+.container .card .face.face1 .content i {
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+}
+.container .card .face.face1 .content h3 {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+}
+.container .card .face.face1 .content a {
+  transition: 0.5s;
+}
+.container .card .face.face2 {
+  position: relative;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+.container .card .face.face2 .content p,
+a {
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.container .card .face.face2 .content a {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  outline: 1px dashed #333;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.container .card .face.face2 .content a:hover {
+  background: #333;
+  color: whitesmoke;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #1a6360;
+}
+
+.round-rectangle {
+  width: 150px;
+  height: 100px;
+  border-radius: 25px;
+  background-color: blueviolet;
+}
+
+.oval {
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: chocolate;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: crimson;
+}
+
+.half-circle {
+  width: 150px;
+  height: 75px;
+  border-radius: 50% /100% 100% 0 0;
+  background-color: darksalmon;
+}
+
+.triangle-topright {
+  width: 0;
+  height: 0;
+  border-top: 100px solid red;
+  border-left: 100px solid transparent;
+}
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+.heart:after {
+  left: 15px;
+  top: 0;
+}
